@@ -1,3 +1,5 @@
+package carteiraDigital;
+
 public class CarteiraDigital {
 
     private Double saldo;
