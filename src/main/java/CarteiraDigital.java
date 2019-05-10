@@ -10,8 +10,12 @@ public class CarteiraDigital {
         saldo += valor;
     }
 
+    protected boolean saldoInsuficiente(Double valor) {
+        return valor > getSaldo();
+    }
+
     public void debitar(Double valor) throws SaldoInSuficienteException {
-        if (valor > saldo) {
+        if (saldoInsuficiente(valor)) {
             throw new SaldoInSuficienteException();
         }
         saldo -= valor;
