@@ -1,45 +1,39 @@
 package carteiraDigital;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.assertEquals;
 
-class CarteiraDigitalTest {
+public class CarteiraDigitalTest {
 
     private CarteiraDigital carteiraDigital;
 
-    @BeforeEach
+    @Before
     public void setUp() {
         carteiraDigital = new CarteiraDigital();
 
         carteiraDigital.creditar(200.);
-        assertEquals(200,carteiraDigital.getSaldo());
+        assertEquals(200,carteiraDigital.getSaldo(),0);
     }
 
     @Test
     public void creditar() {
         carteiraDigital.creditar(50.);
 
-        assertEquals(250,carteiraDigital.getSaldo());
+        assertEquals(250,carteiraDigital.getSaldo(),0);
     }
 
     @Test
     public void debitar() throws SaldoInsuficienteException {
         carteiraDigital.debitar(75.);
 
-        assertEquals(125, carteiraDigital.getSaldo());
+        assertEquals(125, carteiraDigital.getSaldo(),0);
     }
 
-    @Test
-    public void debitarSemSaldoSuficiente() {
-        assertThrows(SaldoInsuficienteException.class, new Executable() {
-            public void execute() throws Throwable {
-                carteiraDigital.debitar(300.);
-            }
-        });
+    @Test(expected = SaldoInsuficienteException.class)
+    public void debitarSemSaldoSuficiente() throws SaldoInsuficienteException {
+        carteiraDigital.debitar(300.);
     }
 
 }

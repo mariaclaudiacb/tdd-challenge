@@ -1,10 +1,10 @@
 package fatorial;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
 
 public class FatorialComLoopTest extends FatorialTest {
 
-    @BeforeEach
+    @Before
     public void setup() {
         fatorial = new FatorialComLoop();
     }

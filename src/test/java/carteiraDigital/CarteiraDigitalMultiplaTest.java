@@ -1,49 +1,47 @@
 package carteiraDigital;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.assertEquals;
 
-class CarteiraDigitalMultiplaTest {
+public class CarteiraDigitalMultiplaTest {
 
     private CarteiraDigitalMultipla carteiraDigitalMultipla;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void setUp() {
         carteiraDigitalMultipla = new CarteiraDigitalMultipla();
 
         assertEquals(0,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
-        assertEquals(0,carteiraDigitalMultipla.getSaldo());
+        assertEquals(0,carteiraDigitalMultipla.getSaldo(),0);
     }
 
     @Test
-    void creditaCinquentaReais_depoisVinteECinco() {
+    public void creditaCinquentaReais_depoisVinteECinco() {
         carteiraDigitalMultipla.creditar(50.);
 
-        assertEquals(50,carteiraDigitalMultipla.getSaldo());
+        assertEquals(50,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(1, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
 
         carteiraDigitalMultipla.creditar(25.);
-        assertEquals(75,carteiraDigitalMultipla.getSaldo());
+        assertEquals(75,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
     @Test
-    void creditaCentoEVinteReais() {
+    public void creditaCentoEVinteReais() {
         carteiraDigitalMultipla.creditar(120.);
 
-        assertEquals(120,carteiraDigitalMultipla.getSaldo());
+        assertEquals(120,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(2, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
     @Test
-    void creditaTrezentosEDezReais() {
+    public void creditaTrezentosEDezReais() {
         carteiraDigitalMultipla.creditar(310.);
 
-        assertEquals(310,carteiraDigitalMultipla.getSaldo());
+        assertEquals(310,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(4, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
@@ -51,12 +49,12 @@ class CarteiraDigitalMultiplaTest {
     public void debitaCinquenta() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.creditar(75.);
 
-        assertEquals(75,carteiraDigitalMultipla.getSaldo());
+        assertEquals(75,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(1, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
 
         carteiraDigitalMultipla.debitar(50.);
 
-        assertEquals(25,carteiraDigitalMultipla.getSaldo());
+        assertEquals(25,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
@@ -64,21 +62,17 @@ class CarteiraDigitalMultiplaTest {
     public void debitaCentoEVinte() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.creditar(150.);
 
-        assertEquals(150,carteiraDigitalMultipla.getSaldo());
+        assertEquals(150,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(2, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
 
         carteiraDigitalMultipla.debitar(120.);
 
-        assertEquals(30,carteiraDigitalMultipla.getSaldo());
+        assertEquals(30,carteiraDigitalMultipla.getSaldo(),0);
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
-    @Test
-    public void debitarSemSaldoSuficiente() {
-        assertThrows(SaldoInsuficienteException.class, new Executable() {
-            public void execute() throws Throwable {
-                carteiraDigitalMultipla.debitar(300.);
-            }
-        });
+    @Test(expected = SaldoInsuficienteException.class)
+    public void debitarSemSaldoSuficiente() throws SaldoInsuficienteException {
+        carteiraDigitalMultipla.debitar(300.);
     }
 }
