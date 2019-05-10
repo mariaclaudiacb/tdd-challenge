@@ -7,7 +7,7 @@
 * construida com saldo zero
 * metodos creditar, debitar e verificarSaldo (getSaldo)
 * nao pode ter saldo menor que zero
-* metodo debitar recebe um valor a debitar, se não tem saldo suficiente lança uma exception (SaldoInSuficienteException)
+* metodo debitar recebe um valor a debitar, se não tem saldo suficiente lança uma exception (SaldoInsuficienteException)
 
 ### Classe CarteiraDigitalMultipla
 * extende CarteiraDigital

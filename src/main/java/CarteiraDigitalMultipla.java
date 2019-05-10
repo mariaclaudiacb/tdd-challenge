@@ -42,10 +42,10 @@ public class CarteiraDigitalMultipla extends CarteiraDigital {
     }
 
     @Override
-    public void debitar(Double valor) throws SaldoInSuficienteException {
+    public void debitar(Double valor) throws SaldoInsuficienteException {
 
         if (saldoInsuficiente(valor)) {
-            throw new SaldoInSuficienteException();
+            throw new SaldoInsuficienteException();
         }
 
         int indice = subcarteiras.size() - 1;

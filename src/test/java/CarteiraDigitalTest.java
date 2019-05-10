@@ -25,7 +25,7 @@ class CarteiraDigitalTest {
     }
 
     @Test
-    public void debitar() throws SaldoInSuficienteException {
+    public void debitar() throws SaldoInsuficienteException {
         carteiraDigital.debitar(75.);
 
         assertEquals(125, carteiraDigital.getSaldo());
@@ -33,7 +33,7 @@ class CarteiraDigitalTest {
 
     @Test
     public void debitarSemSaldoSuficiente() {
-        assertThrows(SaldoInSuficienteException.class, new Executable() {
+        assertThrows(SaldoInsuficienteException.class, new Executable() {
             public void execute() throws Throwable {
                 carteiraDigital.debitar(300.);
             }

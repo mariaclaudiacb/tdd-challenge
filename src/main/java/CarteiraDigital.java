@@ -14,9 +14,9 @@ public class CarteiraDigital {
         return valor > getSaldo();
     }
 
-    public void debitar(Double valor) throws SaldoInSuficienteException {
+    public void debitar(Double valor) throws SaldoInsuficienteException {
         if (saldoInsuficiente(valor)) {
-            throw new SaldoInSuficienteException();
+            throw new SaldoInsuficienteException();
         }
         saldo -= valor;
     }
