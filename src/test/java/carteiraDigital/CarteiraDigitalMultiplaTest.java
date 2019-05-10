@@ -1,6 +1,7 @@
 package carteiraDigital;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,6 +18,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(0,carteiraDigitalMultipla.getSaldo(),0);
     }
 
+    @Ignore
     @Test
     public void creditaCinquentaReais_depoisVinteECinco() {
         carteiraDigitalMultipla.creditar(50.);
@@ -29,6 +31,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
+    @Ignore
     @Test
     public void creditaCentoEVinteReais() {
         carteiraDigitalMultipla.creditar(120.);
@@ -37,6 +40,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(2, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
+    @Ignore
     @Test
     public void creditaTrezentosEDezReais() {
         carteiraDigitalMultipla.creditar(310.);
@@ -45,6 +49,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(4, carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
+    @Ignore
     @Test
     public void debitaCinquenta() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.creditar(75.);
@@ -58,6 +63,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
+    @Ignore
     @Test
     public void debitaCentoEVinte() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.creditar(150.);
@@ -71,6 +77,7 @@ public class CarteiraDigitalMultiplaTest {
         assertEquals(1,carteiraDigitalMultipla.getQuantidadeSubCarteiras());
     }
 
+    @Ignore
     @Test(expected = SaldoInsuficienteException.class)
     public void debitarSemSaldoSuficiente() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.debitar(300.);
