@@ -22,20 +22,29 @@ public class CarteiraDigitalMultipla extends CarteiraDigital {
             adicionarCarteira();
         }
 
-        int indice = subcarteiras.size() - 1;
+        CarteiraDigital ulimaCarteira = pegaUltimaCarteiraAdicionada();
 
-        if (subcarteiras.get(indice).getSaldo() + valor > 100) {
-            Double valorCreditar = 100 - subcarteiras.get(indice).getSaldo();
-            Double valorrestante = valor - valorCreditar;
+        if (saldoResultanteMaiorQueLimite(ulimaCarteira.getSaldo(),valor)) {
+            Double valorCreditar = 100 - ulimaCarteira.getSaldo();
+            Double valorRestante = valor - valorCreditar;
 
-            subcarteiras.get(indice).creditar(valorCreditar);
+            ulimaCarteira.creditar(valorCreditar);
 
             adicionarCarteira();
 
-            creditar(valorrestante);
+            creditar(valorRestante);
         } else {
-            subcarteiras.get(indice).creditar(valor);
+            ulimaCarteira.creditar(valor);
         }
+    }
+    
+    private boolean saldoResultanteMaiorQueLimite(Double saldo, Double valor) {
+        return saldo + valor > 100;
+    }
+    
+    private CarteiraDigital pegaUltimaCarteiraAdicionada() {
+        int indice = subcarteiras.size() - 1;
+        return subcarteiras.get(indice);
     }
 
     private void adicionarCarteira() {
@@ -50,16 +59,21 @@ public class CarteiraDigitalMultipla extends CarteiraDigital {
             throw new SaldoInsuficienteException();
         }
 
-        int indice = subcarteiras.size() - 1;
+        CarteiraDigital ulimaCarteira = pegaUltimaCarteiraAdicionada();
 
-        if (subcarteiras.get(indice).getSaldo() > valor) {
-            subcarteiras.get(indice).debitar(valor);
+        if (ulimaCarteira.getSaldo() > valor) {
+            ulimaCarteira.debitar(valor);
         } else {
 
-            Double valorRestante = valor - subcarteiras.get(indice).getSaldo();
-            subcarteiras.remove(indice);
+            Double valorRestante = valor - ulimaCarteira.getSaldo();
+            removerUltimaCarteira();
             debitar(valorRestante);
         }
+    }
+    
+    private void removerUltimaCarteira() {
+        int indice = subcarteiras.size() - 1;
+        subcarteiras.remove(indice);
     }
 
     @Override
