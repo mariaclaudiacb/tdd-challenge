@@ -61,7 +61,7 @@ public class CarteiraDigitalMultipla extends CarteiraDigital {
 
         CarteiraDigital ulimaCarteira = pegaUltimaCarteiraAdicionada();
 
-        if (ulimaCarteira.getSaldo() > valor) {
+        if (temSaldoSuficiente(valor, ulimaCarteira)) {
             ulimaCarteira.debitar(valor);
         } else {
 
@@ -70,7 +70,11 @@ public class CarteiraDigitalMultipla extends CarteiraDigital {
             debitar(valorRestante);
         }
     }
-    
+
+    private boolean temSaldoSuficiente(Double valor, CarteiraDigital ulimaCarteira) {
+        return ulimaCarteira.getSaldo() > valor;
+    }
+
     private void removerUltimaCarteira() {
         int indice = subcarteiras.size() - 1;
         subcarteiras.remove(indice);
