@@ -20,17 +20,21 @@ cd tdd-challenge
 git checkout -b resolucao
 ```
 * Desenvolver soluções removendo os @Ignore dos testes aos poucos até fazer todos os testes passarem
-* O Desafio fatorial é mais fácil para começar
 * Ao final pode commitar o código (pode ir commitando aos poucos durante o desenvolvimento também)
 ```
 git commit -a -m "Mensagem do commit"
 git push
 ```
 
-**Bonus:** Trocar de branch:
+**Adicional:** Comando para trocar de branch:
 ```
 git checkout nome_do_branch
 ``` 
+
+## Exercícios básicos
+
+Uma lista de exercícios básicos para treinar lógica de programação. Sem focar tanto em orientação a objetos, o objetivo dos exercícios é fazer pensar um pouco em como resolver alguns problemas computacionalmente.
+
 
 ## Desafio fatorial
 
