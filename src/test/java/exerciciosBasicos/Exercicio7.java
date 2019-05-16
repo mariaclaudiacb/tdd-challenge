@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -24,16 +25,19 @@ public class Exercicio7 {
      *  Implemente uma função que calcule o custo final do carro
      *
      */
+    @Ignore
     @Test
     public void carroDeDezMil() {
         assertEquals(17300,custoFinalDoCarro(10000,.28,.45),0);
     }
 
+    @Ignore
     @Test
     public void carroDeQuarentaECincoMilMil() {
         assertEquals(77850,custoFinalDoCarro(45000,.28,.45),0);
     }
 
+    @Ignore
     @Test
     public void carroDeTrintaESeteMil() {
         assertEquals(64010,custoFinalDoCarro(37000,.28,.45),0);
@@ -46,7 +50,7 @@ public class Exercicio7 {
 
 
 
-        return custoDeFabrica + (custoDeFabrica * percentualDistribuidor) + (custoDeFabrica * percentualDeImpostos);
+        return 0;
     }
 
 }

@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -24,90 +25,105 @@ public class Exercicio16 {
      *
      *
      */
+    @Ignore
     @Test
     public void verificaSeTresDivididoPorUmEhExato() {
 
         assertTrue(ehDivisaoExata(3,1));
     }
 
+    @Ignore
     @Test
     public void verificaSeTresDivididoPorTresEhExato() {
 
         assertTrue(ehDivisaoExata(3,3));
     }
 
+    @Ignore
     @Test
     public void verificaSeTresDivididoPorDoisEhExato() {
 
         assertFalse(ehDivisaoExata(3,2));
     }
 
+    @Ignore
     @Test
     public void doisEhPrimo() {
 
         assertTrue(ehPrimo(2));
     }
 
+    @Ignore
     @Test
     public void tresEhPrimo() {
 
         assertTrue(ehPrimo(3));
     }
 
+    @Ignore
     @Test
     public void quatroEhPrimo() {
 
         assertFalse(ehPrimo(4));
     }
 
+    @Ignore
     @Test
     public void cincoEhPrimo() {
 
         assertTrue(ehPrimo(5));
     }
 
+    @Ignore
     @Test
     public void seisEhPrimo() {
 
         assertFalse(ehPrimo(6));
     }
 
+    @Ignore
     @Test
     public void seteEhPrimo() {
 
         assertTrue(ehPrimo(7));
     }
 
+    @Ignore
     @Test
     public void oitoEhPrimo() {
 
         assertFalse(ehPrimo(8));
     }
 
+    @Ignore
     @Test
     public void noveEhPrimo() {
 
         assertFalse(ehPrimo(9));
     }
 
+    @Ignore
     @Test
     public void dezEhPrimo() {
 
         assertFalse(ehPrimo(10));
     }
 
+    @Ignore
     @Test
     public void onzeEhPrimo() {
 
         assertTrue(ehPrimo(11));
     }
 
+    @Ignore
     @Test
     public void dozeEhPrimo() {
 
         assertFalse(ehPrimo(12));
     }
 
+    @Ignore
     @Test
     public void trezeEhPrimo() {
 
@@ -119,12 +135,7 @@ public class Exercicio16 {
 
         // Aqui entra a lógica do programa.
 
-        for (int i = (num - 1) ; i > 1 ; i--) {
-            if (ehDivisaoExata(num,i)) {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 
     // Função que descobre se dois números possuem divisão exata.
@@ -132,7 +143,7 @@ public class Exercicio16 {
 
         // Aqui entra a lógica do programa.
 
-        return dividendo % divisor == 0;
+        return false;
     }
 
 }

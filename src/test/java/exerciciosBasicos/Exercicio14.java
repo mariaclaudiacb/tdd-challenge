@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -38,6 +39,7 @@ public class Exercicio14 {
      *
      *
      */
+    @Ignore
     @Test
     public void calcularRaizesDeUmZeroEMenosDezeseis() {
 
@@ -51,6 +53,7 @@ public class Exercicio14 {
         assertEquals(-4,raiz2(a, b, c),0);
     }
 
+    @Ignore
     @Test
     public void calcularRaizesDeZeroDoisEUm() {
 
@@ -64,6 +67,7 @@ public class Exercicio14 {
         assertEquals(0,raiz2(a, b, c),0);
     }
 
+    @Ignore
     @Test
     public void calcularRaizes() {
 
@@ -82,7 +86,7 @@ public class Exercicio14 {
 
         // Aqui entra a lógica do programa.
 
-        return Math.pow(b,2) - (4 * a * c);
+        return 0;
     }
 
     // Retorna o valor da primeira raiz
@@ -90,9 +94,7 @@ public class Exercicio14 {
 
         // Aqui entra a lógica do programa.
 
-        double delta = delta(a, b, c);
-
-        return (- b + Math.sqrt(delta)) / 2 * a;
+        return 0;
     }
 
     // Retorna o valor da segunda raiz
@@ -100,9 +102,7 @@ public class Exercicio14 {
 
         // Aqui entra a lógica do programa.
 
-        double delta = delta(a, b, c);
-
-        return (- b - Math.sqrt(delta)) / 2 * a;
+        return 0;
     }
 
 }

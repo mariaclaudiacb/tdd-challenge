@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -19,18 +20,22 @@ public class Exercicio12 {
      * Crie uma função que descubra se um valor é positivo ou negativo (considere o valor zero como positivo)
      *
      */
+
+    @Ignore
     @Test
     public void verificaSeDoisEhPositivo() {
 
         assertTrue(ehPositivo(2));
     }
 
+    @Ignore
     @Test
     public void verificaSeMenosTresEhPositivo() {
 
         assertFalse(ehPositivo(-3));
     }
 
+    @Ignore
     @Test
     public void verificaSeZeroEhPositivo() {
 
@@ -41,7 +46,7 @@ public class Exercicio12 {
 
         // Escreva sua lógica abaixo
 
-        return numero >= 0;
+        return false;
     }
 
 }

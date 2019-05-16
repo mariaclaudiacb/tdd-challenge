@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,18 +23,21 @@ public class Exercicio9 {
      * Faça um algoritmo que calcule o reajuste de um salário
      *
      */
+    @Ignore
     @Test
     public void calcularreajusteDeSalarioMilPercentualQuinte() {
 
         assertEquals(150,calcularReajuste(1000,.15),0);
     }
 
+    @Ignore
     @Test
     public void calcularreajusteDeSalarioMilEQuinhentosPercentualTreze() {
 
         assertEquals(195,calcularReajuste(1500,.13),0);
     }
 
+    @Ignore
     @Test
     public void calcularreajusteDeSalarioCincoMilPercentualDois() {
 
@@ -44,7 +48,7 @@ public class Exercicio9 {
 
         // Escreva sua lógica abaixo
 
-        return salario * percentualReajuste;
+        return 0;
     }
 
 }
