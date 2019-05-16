@@ -83,6 +83,7 @@ public class CarteiraDigitalMultiplaTest {
         carteiraDigitalMultipla.debitar(300.);
     }
 
+    @Ignore
     @Test
     public void naoDeveDebitarNadaSeLancarException() {
 
