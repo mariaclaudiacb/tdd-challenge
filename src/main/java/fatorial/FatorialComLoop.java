@@ -9,16 +9,10 @@ public class FatorialComLoop implements Fatorial {
             throw new FatorialNumeroNegativoException();
         }
 
-        if (valor == 0 || valor == 1) {
-            return 1;
-        }
-
         int acumulador = 1;
-        int contador = 1;
 
-        while (contador <= valor) {
-            acumulador *= contador;
-            contador++;
+        while (valor > 1) {
+            acumulador *= valor--;
         }
 
         return acumulador;
