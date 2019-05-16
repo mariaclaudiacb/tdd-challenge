@@ -18,7 +18,7 @@ public class CarteiraDigitalMultiplaTest {
     }
 
     @Test
-    public void creditaCinquentaReais_depoisVinteECinco() {
+    public void creditaCinquentaReais_depoisVinteECinco_DeveTerUmaSubcarteira() {
         carteiraDigitalMultipla.creditar(50.);
 
         assertEquals(50,carteiraDigitalMultipla.getSaldo(),0);
@@ -30,7 +30,7 @@ public class CarteiraDigitalMultiplaTest {
     }
 
     @Test
-    public void creditaCentoEVinteReais() {
+    public void creditaCentoEVinteReais_DeveFicarComDuasSubcarteiras() {
         carteiraDigitalMultipla.creditar(120.);
 
         assertEquals(120,carteiraDigitalMultipla.getSaldo(),0);
@@ -38,7 +38,7 @@ public class CarteiraDigitalMultiplaTest {
     }
 
     @Test
-    public void creditaTrezentosEDezReais() {
+    public void creditaTrezentosEDezReais_DeveFicarComQuatroSubcarteiras() {
         carteiraDigitalMultipla.creditar(310.);
 
         assertEquals(310,carteiraDigitalMultipla.getSaldo(),0);
@@ -59,7 +59,7 @@ public class CarteiraDigitalMultiplaTest {
     }
 
     @Test
-    public void debitaCentoEVinte() throws SaldoInsuficienteException {
+    public void debitaCentoEVinte_DeveDiminuirUmaSubcarteira() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.creditar(150.);
 
         assertEquals(150,carteiraDigitalMultipla.getSaldo(),0);
@@ -74,5 +74,20 @@ public class CarteiraDigitalMultiplaTest {
     @Test(expected = SaldoInsuficienteException.class)
     public void debitarSemSaldoSuficiente() throws SaldoInsuficienteException {
         carteiraDigitalMultipla.debitar(300.);
+    }
+
+    @Test
+    public void naoDeveDebitarNadaSeLancarException() {
+
+        carteiraDigitalMultipla.creditar(200.);
+
+        assertEquals(200.,carteiraDigitalMultipla.getSaldo(),0);
+
+        try {
+            carteiraDigitalMultipla.debitar(300.);
+        } catch (SaldoInsuficienteException e) {
+            assertEquals(200,carteiraDigitalMultipla.getSaldo(),0);
+        }
+
     }
 }
