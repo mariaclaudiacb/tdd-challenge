@@ -1,5 +1,6 @@
 package exerciciosBasicos;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -18,24 +19,28 @@ public class Exercicio3 {
      * Sabendo que a área de um retângulo é base x altura, faço uma função que calcule a área de um retângulo
      */
 
+    @Ignore
     @Test
     public void calcularAreaDoRetanguloTresPorNove() {
 
         assertEquals(27, calcularArea(3,9));
     }
 
+    @Ignore
     @Test
     public void calcularAreaDoRetanguloTresPorTres() {
 
         assertEquals(9, calcularArea(3,3));
     }
 
+    @Ignore
     @Test
     public void calcularAreaDoRetanguloDoisPorNove() {
 
         assertEquals(18, calcularArea(2,9));
     }
 
+    @Ignore
     @Test
     public void calcularAreaDoRetanguloQuatroPorCinco() {
 
@@ -48,7 +53,7 @@ public class Exercicio3 {
 
 
 
-        return base * altura;
+        return 0;
     }
 
 
