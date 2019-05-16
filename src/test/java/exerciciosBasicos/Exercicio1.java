@@ -29,7 +29,7 @@ public class Exercicio1 {
 
         // Escreva sua lógica abaixo
 
-        //  Escreva sua lógica acima
+        // Escreva sua lógica acima
 
         assertEquals(555,a);
         assertEquals(999,b);
