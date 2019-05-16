@@ -1,6 +1,5 @@
 package exerciciosBasicos;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -18,19 +17,16 @@ public class Exercicio5 {
      *
      * Faça um programa que calcule a média simples (aritmética) de 3 valores quaisquer.
      */
-    @Ignore
     @Test
     public void mediaDeSeisSeteEOito() {
         assertEquals(7,media(6,7,8));
     }
 
-    @Ignore
     @Test
     public void mediaDeDoisSeteEDez() {
         assertEquals(6,media(2,7,10));
     }
 
-    @Ignore
     @Test
     public void mediaDeVinteQuatroENove() {
         assertEquals(11,media(20,4,9));
@@ -43,7 +39,7 @@ public class Exercicio5 {
 
 
 
-        return 0;
+        return (valor1 + valor2 + valor3) / 3;
     }
 
 }

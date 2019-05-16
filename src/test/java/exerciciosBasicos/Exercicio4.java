@@ -1,6 +1,5 @@
 package exerciciosBasicos;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,7 +16,6 @@ public class Exercicio4 {
      * Antecessor e sucessor de um número qualquer
      */
 
-    @Ignore
     @Test
     public void antecessorESucessorDeTres() {
 
@@ -25,7 +23,6 @@ public class Exercicio4 {
         assertEquals(4,sucessor(3));
     }
 
-    @Ignore
     @Test
     public void antecessorESucessorDeQuatro() {
 
@@ -33,7 +30,6 @@ public class Exercicio4 {
         assertEquals(5,sucessor(4));
     }
 
-    @Ignore
     @Test
     public void antecessorESucessorDeVinte() {
 
@@ -46,7 +42,7 @@ public class Exercicio4 {
         // Escreva sua lógica abaixo
 
 
-        return 0;
+        return numero - 1;
     }
 
     private int sucessor(int numero) {
@@ -54,7 +50,7 @@ public class Exercicio4 {
         // Escreva sua lógica abaixo
 
 
-        return 0;
+        return numero + 1;
     }
 
 }
