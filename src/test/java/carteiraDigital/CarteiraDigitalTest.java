@@ -14,6 +14,8 @@ public class CarteiraDigitalTest {
     public void setUp() {
         carteiraDigital = new CarteiraDigital();
 
+        assertEquals(0.,carteiraDigital.getSaldo(),0);
+
         carteiraDigital.creditar(200.);
         assertEquals(200,carteiraDigital.getSaldo(),0);
     }
