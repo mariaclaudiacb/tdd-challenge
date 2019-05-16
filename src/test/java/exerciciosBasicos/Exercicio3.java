@@ -24,9 +24,6 @@ public class Exercicio3 {
     public void calcularAreaDoRetanguloTresPorNove() {
 
         assertEquals(27, calcularArea(3,9));
-        assertEquals(9, calcularArea(3,3));
-        assertEquals(18, calcularArea(2,9));
-        assertEquals(20, calcularArea(4,5));
     }
 
     @Ignore
