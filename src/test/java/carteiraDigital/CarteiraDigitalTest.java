@@ -40,4 +40,16 @@ public class CarteiraDigitalTest {
         carteiraDigital.debitar(300.);
     }
 
+    @Ignore
+    @Test
+    public void naoPodeTerSaldoNegativo() {
+
+        try {
+            carteiraDigital.debitar(300.);
+        } catch (SaldoInsuficienteException e) {
+            assertEquals(200.,carteiraDigital.getSaldo(),0);
+        }
+
+    }
+
 }
