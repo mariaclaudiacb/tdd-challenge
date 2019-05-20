@@ -1,6 +1,11 @@
 package exerciciosVetor;
 
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 /**
  * Baseado nos exercícios de http://www.devfuria.com.br/logica-de-programacao/
  */
@@ -15,57 +20,45 @@ public class ExercicioVetor5 {
      *
      *  Faça um programa que identifique se em um determinado vetor, existem ou não valores repetidos.
      */
-    /*@Test
-    public void maiorEMenorIndice() {
 
-        int[] vetor = {6,10,4,21,9};
 
-        assertEquals(3,indiceDoMaiorValor(vetor)); // O maior valor é 21, seu índice é 3
+    @Test
+    public void verificaVetorComValorRepetido() {
 
-        assertEquals(2,indiceDoMenorValor(vetor)); // O menor valor é 4, seu índice é 2
+        int[] vetor = {6,10,4,21,9,10};
+
+        assertTrue(verificaSePossuiValorRepetido(vetor));
     }
 
     @Test
-    public void maiorEMenorIndice2() {
+    public void verificaVetorComValorRepetido2() {
 
-        int[] vetor = {45,8,70,9,19,64,100,2,8,10};
+        int[] vetor = {6,10,4,21,9,6};
 
-        assertEquals(6,indiceDoMaiorValor(vetor)); // O maior valor é 100, seu índice é 3
-
-        assertEquals(7,indiceDoMenorValor(vetor)); // O menor valor é 2, seu índice é 7
+        assertTrue(verificaSePossuiValorRepetido(vetor));
     }
 
-    private int indiceDoMaiorValor(int[] vetor) {
+    @Test
+    public void verificaVetorSemValorRepetido() {
+
+        int[] vetor = {1,2,3,4,5,6};
+
+        assertFalse(verificaSePossuiValorRepetido(vetor));
+    }
+
+    private boolean verificaSePossuiValorRepetido(int[] vetor) {
 
         // Escreva sua lógica abaixo
 
-        int valorMaior = -1;
-        int indiceMaior = 0;
+        for (int i = 0;i<vetor.length;i++) {
+           for (int j = i+1 ; j < vetor.length;j++) {
 
-        for (int i = 0 ; i<vetor.length;i++) {
-            if (valorMaior < vetor[i]) {
-                valorMaior = vetor[i];
-                indiceMaior = i;
-            }
+               if (vetor[i] == vetor[j]) {
+                   return true;
+               }
+
+           }
         }
-
-       return indiceMaior;
+        return false;
     }
-
-    private int indiceDoMenorValor(int[] vetor) {
-
-        // Escreva sua lógica abaixo
-
-        int valorMenor = Integer.MAX_VALUE;
-        int indiceMenor = 0;
-
-        for (int i = 0 ; i<vetor.length;i++) {
-            if (valorMenor > vetor[i]) {
-                valorMenor = vetor[i];
-                indiceMenor = i;
-            }
-        }
-
-        return indiceMenor;
-    }*/
 }
