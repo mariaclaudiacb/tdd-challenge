@@ -33,7 +33,7 @@ public class Exercicio7 {
 
     @Ignore
     @Test
-    public void carroDeQuarentaECincoMilMil() {
+    public void carroDeQuarentaECincoMil() {
         assertEquals(77850,custoFinalDoCarro(45000,.28,.45),0);
     }
 
@@ -41,6 +41,16 @@ public class Exercicio7 {
     @Test
     public void carroDeTrintaESeteMil() {
         assertEquals(64010,custoFinalDoCarro(37000,.28,.45),0);
+    }
+
+    @Test
+    public void carroDeTrintaESeteMilComPercentuaisDiferentes() {
+        assertEquals(62900,custoFinalDoCarro(37000,.20,.50),0);
+    }
+
+    @Test
+    public void carroDeQuarentaECincoMilComPercentuaisDiferentes() {
+        assertEquals(80550,custoFinalDoCarro(45000,.30,.49),0);
     }
 
     private double custoFinalDoCarro(double custoDeFabrica, double percentualDistribuidor, double percentualDeImpostos) {
