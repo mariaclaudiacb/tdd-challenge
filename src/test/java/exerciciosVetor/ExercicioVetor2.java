@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -17,6 +18,7 @@ public class ExercicioVetor2 {
      *
      *  Escreva um algoritmo para carregar um vetor com os números de 1 (inclusive) a n (inclusive) em ordem crescente.
      */
+    @Ignore
     @Test
     public void carregaVetorUmAcinco() {
 
@@ -26,6 +28,7 @@ public class ExercicioVetor2 {
         assertArrayEquals(expected,vetor);
     }
 
+    @Ignore
     @Test
     public void carregaVetorUmADez() {
 
@@ -39,11 +42,6 @@ public class ExercicioVetor2 {
 
         // Escreva sua lógica abaixo
 
-        int[] vetor = new int[valorMaximo];
-
-        for (int i = 0 ; i < valorMaximo ; i++) {
-            vetor[i] = i+1;
-        }
-        return vetor;
+        return null;
     }
 }

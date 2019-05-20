@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -20,6 +21,7 @@ public class ExercicioVetorDesafio {
      *  Crie um método que some todos os valores de 0 a 100 sem utilizar laços de repetição (Ver soma de Gaus)
      */
 
+    @Ignore
     @Test
     public void somaValoresUmACem() {
 
@@ -35,6 +37,6 @@ public class ExercicioVetorDesafio {
 
         // Escreva sua lógica abaixo
 
-        return (vetor[0] + vetor[vetor.length - 1]) * 50;
+        return 0;
     }
 }

@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -19,6 +20,7 @@ public class ExercicioVetor4 {
      *
      *  Dado um vetor qualquer sem valores repetidos, descubra qual é o índice do maior valor e o índice do menor valor.
      */
+    @Ignore
     @Test
     public void maiorEMenorIndice() {
 
@@ -29,6 +31,7 @@ public class ExercicioVetor4 {
         assertEquals(2,indiceDoMenorValor(vetor)); // O menor valor é 4, seu índice é 2
     }
 
+    @Ignore
     @Test
     public void maiorEMenorIndice2() {
 
@@ -43,33 +46,13 @@ public class ExercicioVetor4 {
 
         // Escreva sua lógica abaixo
 
-        int valorMaior = -1;
-        int indiceMaior = 0;
-
-        for (int i = 0 ; i<vetor.length;i++) {
-            if (valorMaior < vetor[i]) {
-                valorMaior = vetor[i];
-                indiceMaior = i;
-            }
-        }
-
-       return indiceMaior;
+        return 0;
     }
 
     private int indiceDoMenorValor(int[] vetor) {
 
         // Escreva sua lógica abaixo
 
-        int valorMenor = Integer.MAX_VALUE;
-        int indiceMenor = 0;
-
-        for (int i = 0 ; i<vetor.length;i++) {
-            if (valorMenor > vetor[i]) {
-                valorMenor = vetor[i];
-                indiceMenor = i;
-            }
-        }
-
-        return indiceMenor;
+        return 0;
     }
 }

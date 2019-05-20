@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,6 +18,7 @@ public class ExercicioVetor1 {
      *
      *  Exercício de lógica de programação onde criaremos uma função para somar um vetor.
      */
+    @Ignore
     @Test
     public void somaValores1() {
 
@@ -25,6 +27,7 @@ public class ExercicioVetor1 {
         assertEquals(60,somaValoresVetor(vetor));
     }
 
+    @Ignore
     @Test
     public void somaValores2() {
 
@@ -33,6 +36,7 @@ public class ExercicioVetor1 {
         assertEquals(100,somaValoresVetor(vetor));
     }
 
+    @Ignore
     @Test
     public void somaValores3() {
 
@@ -45,12 +49,6 @@ public class ExercicioVetor1 {
 
         // Escreva sua lógica abaixo
 
-        int acumulador = 0;
-
-        for (int valor : vetor) {
-            acumulador += valor;
-        }
-
-        return acumulador;
+        return 0;
     }
 }

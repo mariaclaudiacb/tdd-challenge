@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -18,6 +19,7 @@ public class ExercicioVetor3 {
      *
      *  Crie um algoritmo para copiar um vetor (utilize laço de repetição).
      */
+    @Ignore
     @Test
     public void copiarVetorUmAcinco() {
 
@@ -31,6 +33,7 @@ public class ExercicioVetor3 {
         assertArrayEquals(vetor,copiaVetor);
     }
 
+    @Ignore
     @Test
     public void copiarVetorUmADez() {
 
@@ -48,12 +51,6 @@ public class ExercicioVetor3 {
 
         // Escreva sua lógica abaixo
 
-        int[] copiaVetor = new int[vetor.length];
-
-        for (int i = 0;i<vetor.length;i++) {
-            copiaVetor[i] = vetor[i];
-        }
-
-        return copiaVetor;
+        return null;
     }
 }

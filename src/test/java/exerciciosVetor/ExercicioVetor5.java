@@ -1,6 +1,7 @@
 package exerciciosVetor;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -21,7 +22,7 @@ public class ExercicioVetor5 {
      *  Faça um programa que identifique se em um determinado vetor, existem ou não valores repetidos.
      */
 
-
+    @Ignore
     @Test
     public void verificaVetorComValorRepetido() {
 
@@ -30,6 +31,7 @@ public class ExercicioVetor5 {
         assertTrue(verificaSePossuiValorRepetido(vetor));
     }
 
+    @Ignore
     @Test
     public void verificaVetorComValorRepetido2() {
 
@@ -38,6 +40,7 @@ public class ExercicioVetor5 {
         assertTrue(verificaSePossuiValorRepetido(vetor));
     }
 
+    @Ignore
     @Test
     public void verificaVetorSemValorRepetido() {
 
@@ -50,15 +53,6 @@ public class ExercicioVetor5 {
 
         // Escreva sua lógica abaixo
 
-        for (int i = 0;i<vetor.length;i++) {
-           for (int j = i+1 ; j < vetor.length;j++) {
-
-               if (vetor[i] == vetor[j]) {
-                   return true;
-               }
-
-           }
-        }
         return false;
     }
 }
