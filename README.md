@@ -41,7 +41,7 @@ Uma lista de exercícios básicos para treinar lógica de programação. Sem foc
 1. Implementar o método calculaFatorial utilizando loop (Classe FatorialComLoop)
 2. Implementar o método calculaFatorial utilizando recursividade (Classe FatorialComRecursividade)
 
-##Desafio Lista Dinâmica
+## Desafio Lista Dinâmica
 Os arrays no java possuem tamanho fixo, isso dificulta quando queremos adicionar ou remover valores sem antes saber qual a quantidade de valores iremos adicionar. Porém existe uma estrutura de dados chamada **lista**, a qual possui tamanho dinâmico, podemos adicionar e remover valores sem nos preocuparmos com o tamanho atual da lista.
 
 ##### Desafio Lista:
