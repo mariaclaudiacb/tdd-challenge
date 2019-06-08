@@ -36,10 +36,19 @@ git checkout nome_do_branch
 Uma lista de exercícios básicos para treinar lógica de programação. Sem focar tanto em orientação a objetos, o objetivo dos exercícios é fazer pensar um pouco em como resolver alguns problemas computacionalmente.
 
 
-## Desafio fatorial
+## Desafio Fatorial
 
 1. Implementar o método calculaFatorial utilizando loop (Classe FatorialComLoop)
 2. Implementar o método calculaFatorial utilizando recursividade (Classe FatorialComRecursividade)
+
+## Desafio Lista Dinâmica
+Os arrays no java possuem tamanho fixo, isso dificulta quando queremos adicionar ou remover valores sem antes saber qual a quantidade de valores iremos adicionar. Porém existe uma estrutura de dados chamada **lista**, a qual possui tamanho dinâmico, podemos adicionar e remover valores sem nos preocuparmos com o tamanho atual da lista.
+
+##### Desafio Lista:
+Criar uma lista utilizando arrays. Aumentando e diminuindo o tamanho de um array, devemos criar uma lista com tamanho dinâmico.
+* Implementar a classe ListaComArray utilizando um array, cuja interface é a classe Lista.
+* Essa classe possui dois construtores, um vai construir nossa lista com tamanho zero, outro com um tamanho pré definido
+* **Dica:** Para alterar o tamanho do array será necessário criar um novo array, maior e menor e copiar os valores do antigo para o novo. Será necessário criar um método que faça essa cópia de valores de um para o outro.
 
 ## Desafio da Carteira Digital
 
