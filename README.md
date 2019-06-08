@@ -58,4 +58,4 @@ Uma lista de exercícios básicos para treinar lógica de programação. Sem foc
 * Cada subcarteira pode possuir no máximo 100 reais de saldo
 * O método creditar adiciona o valor às subcarteiras, se a subcarteira tiver o valor máximo ele cria mais uma e adiciona o valor restante
 * O método debitar, se tiver saldo somando todas as subcarteiras (getSaldo) passa por todas, subtraindo os valores de cada uma até quitar o valor (percorre do maior indice até o menor), também lança exception se não tiver saldo suficiente
-* Se uma subtcarteira ficar vazia ao debitar deve ser removida
+* Se uma subcarteira ficar vazia ao debitar deve ser removida
