@@ -47,7 +47,7 @@ Os arrays no java possuem tamanho fixo, isso dificulta quando queremos adicionar
 ##### Desafio Lista:
 Criar uma lista utilizando arrays. Aumentando e diminuindo o tamanho de um array, devemos criar uma lista com tamanho dinâmico.
 * Implementar a classe ListaComArray utilizando um array, cuja interface é a classe Lista.
-* Essa classe possui dois contrutores, um vai construir nossa lista com tamanho zero, outro com um tamanho pré definido
+* Essa classe possui dois construtores, um vai construir nossa lista com tamanho zero, outro com um tamanho pré definido
 * **Dica:** Para alterar o tamanho do array será necessário criar um novo array, maior e menor e copiar os valores do antigo para o novo. Será necessário criar um método que faça essa cópia de valores de um para o outro.
 
 ## Desafio da Carteira Digital
