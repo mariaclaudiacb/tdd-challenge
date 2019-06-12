@@ -24,7 +24,6 @@ public class Exercicio8 {
      * dividisão
      *
      */
-    @Ignore
     @Test
     public void quatroOperacoesSobreDezEDois() {
 
@@ -34,7 +33,6 @@ public class Exercicio8 {
         assertEquals(5,dividir(10,2));
     }
 
-    @Ignore
     @Test
     public void quatroOperacoesSobreDozeESete() {
 
@@ -46,30 +44,26 @@ public class Exercicio8 {
 
     private int somar(int valor1, int valor2) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+    int soma = valor1 + valor2;
+        return soma;
     }
 
     private int subtrair(int valor1, int valor2) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+    int subtrair = valor1 - valor2;
+        return subtrair;
     }
 
     private int multiplicar(int valor1, int valor2) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+    int multiplicar = valor1 * valor2;
+        return multiplicar;
     }
 
     private int dividir(int valor1, int valor2) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+    int dividir = valor1 / valor2;
+        return dividir;
     }
 
 }

@@ -17,7 +17,7 @@ public class Exercicio4 {
      * Antecessor e sucessor de um número qualquer
      */
 
-    @Ignore
+
     @Test
     public void antecessorESucessorDeTres() {
 
@@ -25,7 +25,6 @@ public class Exercicio4 {
         assertEquals(4,sucessor(3));
     }
 
-    @Ignore
     @Test
     public void antecessorESucessorDeQuatro() {
 
@@ -33,7 +32,6 @@ public class Exercicio4 {
         assertEquals(5,sucessor(4));
     }
 
-    @Ignore
     @Test
     public void antecessorESucessorDeVinte() {
 
@@ -42,19 +40,17 @@ public class Exercicio4 {
     }
 
     private int antecessor(int numero) {
+        int antecessor = numero - 1;
 
-        // Escreva sua lógica abaixo
 
-
-        return 0;
+        return antecessor;
     }
 
     private int sucessor(int numero) {
 
-        // Escreva sua lógica abaixo
+    int sucessor = numero + 1 ;
 
-
-        return 0;
+        return sucessor;
     }
 
 }

@@ -30,28 +30,24 @@ public class Exercicio11 {
      * Lembrando que determinamos se um número é par ou ímpar se ele é divisível ou não por dois respectivamente
      *
      */
-    @Ignore
     @Test
     public void verificaSeDoisEhPar() {
 
         assertTrue(ehPar(2));
     }
 
-    @Ignore
     @Test
     public void verificaSeTresEhPar() {
 
         assertFalse(ehPar(3));
     }
 
-    @Ignore
     @Test
     public void verificaSeVinteEhPar() {
 
         assertTrue(ehPar(20));
     }
 
-    @Ignore
     @Test
     public void verificaSeTrintaEUmEhPar() {
 
@@ -61,9 +57,8 @@ public class Exercicio11 {
 
     private boolean ehPar(int numero) {
 
-        // Escreva sua lógica abaixo
-
-        return false;
+    boolean par = numero % 2 == 0;
+       return par;
     }
 
 }

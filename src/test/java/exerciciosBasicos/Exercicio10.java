@@ -28,21 +28,18 @@ public class Exercicio10 {
      * n = períodos
      *
      */
-    @Ignore
     @Test
     public void calcularJuroSimplesDeDezeseisMil() {
 
         assertEquals(2560,calcularJurosSimples(16000,.04,4),0);
     }
 
-    @Ignore
     @Test
     public void calcularJuroSimplesDeCincoMil() {
 
         assertEquals(800,calcularJurosSimples(5000,.04,4),0);
     }
 
-    @Ignore
     @Test
     public void calcularJuroSimplesDeQuarentaMil() {
 
@@ -51,9 +48,8 @@ public class Exercicio10 {
 
     private double calcularJurosSimples(double capital, double taxa, int quantidadeDePeriodos) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+    double jurosSimples = capital* taxa * quantidadeDePeriodos;
+        return jurosSimples;
     }
 
 }

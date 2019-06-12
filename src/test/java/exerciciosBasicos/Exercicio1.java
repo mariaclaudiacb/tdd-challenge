@@ -26,8 +26,13 @@ public class Exercicio1 {
 
         int a = 999;
         int b = 555;
-
-        // Escreva sua lógica abaixo
+        if(a > b) {
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+        }
+        System.out.println(a +",a" ) ;
+        System.out.println(b +", b");
 
         // Escreva sua lógica acima
 

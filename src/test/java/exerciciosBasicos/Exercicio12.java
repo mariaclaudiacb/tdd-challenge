@@ -21,21 +21,18 @@ public class Exercicio12 {
      *
      */
 
-    @Ignore
     @Test
     public void verificaSeDoisEhPositivo() {
 
         assertTrue(ehPositivo(2));
     }
 
-    @Ignore
     @Test
     public void verificaSeMenosTresEhPositivo() {
 
         assertFalse(ehPositivo(-3));
     }
 
-    @Ignore
     @Test
     public void verificaSeZeroEhPositivo() {
 
@@ -44,9 +41,12 @@ public class Exercicio12 {
 
     private boolean ehPositivo(int numero) {
 
-        // Escreva sua lógica abaixo
-
+    if (numero> 1){
+       return true; }
+    else{
         return false;
+
+    }
     }
 
 }
