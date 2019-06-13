@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  */
 
 public class Exercicio14 {
-
+    double delta;
     /**
      * Exercício 14
      *
@@ -39,7 +39,6 @@ public class Exercicio14 {
      *
      *
      */
-    @Ignore
     @Test
     public void calcularRaizesDeUmZeroEMenosDezeseis() {
 
@@ -53,7 +52,6 @@ public class Exercicio14 {
         assertEquals(-4,raiz2(a, b, c),0);
     }
 
-    @Ignore
     @Test
     public void calcularRaizesDeZeroDoisEUm() {
 
@@ -67,7 +65,6 @@ public class Exercicio14 {
         assertEquals(0,raiz2(a, b, c),0);
     }
 
-    @Ignore
     @Test
     public void calcularRaizes() {
 
@@ -83,26 +80,24 @@ public class Exercicio14 {
 
     // Retorna o valor de delta
     private double delta(int a, int b, int c) {
+        delta = Math.pow(b,2) - 4 * a * c;
 
-        // Aqui entra a lógica do programa.
-
-        return 0;
+        return delta;
     }
 
     // Retorna o valor da primeira raiz
     private double raiz1(int a, int b, int c) {
 
-        // Aqui entra a lógica do programa.
-
-        return 0;
+        double raiz1 = (-b +  Math.sqrt(delta))/2*a;
+        return raiz1;
     }
 
     // Retorna o valor da segunda raiz
     private double raiz2(int a, int b, int c) {
 
-        // Aqui entra a lógica do programa.
+        double raiz2 = (-b -  Math.sqrt(delta))/2*a;
 
-        return 0;
+        return raiz2;
     }
 
 }

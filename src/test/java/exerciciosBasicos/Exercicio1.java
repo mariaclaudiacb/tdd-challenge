@@ -20,19 +20,15 @@ public class Exercicio1 {
      *
      *  A seguir (utilizando apenas atribuições entre variáveis) troque os seus conteúdos fazendo com que o valor que está em a passe para b e vice-versa.
      */
-    @Ignore
     @Test
     public void trocarOValorDeDuasVariaveis() {
 
         int a = 999;
         int b = 555;
-        if(a > b) {
-            a = a ^ b;
-            b = a ^ b;
-            a = a ^ b;
-        }
-        System.out.println(a +",a" ) ;
-        System.out.println(b +", b");
+
+        int armazenador =a;
+        a = b;
+        b = armazenador;
 
         // Escreva sua lógica acima
 

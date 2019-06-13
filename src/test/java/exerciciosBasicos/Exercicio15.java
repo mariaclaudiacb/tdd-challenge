@@ -30,35 +30,31 @@ public class Exercicio15 {
      * Dica2: Treinar operador de loop neste exercício
      *
      */
-    @Ignore
     @Test
     public void somarDigitosDeUm() {
 
         assertEquals(1,somarDigitos(1));
     }
 
-    @Ignore
     @Test
     public void somarDigitosDeVinteEDois() {
 
         assertEquals(4,somarDigitos(22));
     }
 
-    @Ignore
     @Test
     public void somarDigitosDeQuarentaEUm() {
 
         assertEquals(5,somarDigitos(41));
     }
 
-    @Ignore
     @Test
     public void somarDigitosDeCentoENoventaEQuatro() {
 
         assertEquals(14,somarDigitos(194));
     }
 
-    @Ignore
+
     @Test
     public void somarDigitosDeDoisMilEQuinze() {
 
@@ -66,10 +62,18 @@ public class Exercicio15 {
     }
 
     private int somarDigitos(int numero) {
-
-        // Aqui entra a lógica do programa.
-
-        return 0;
+        int soma= 0;
+        while(numero != 0){
+            soma += numero % 10;
+            numero = (numero/10);
+        }
+        return soma;
     }
 
 }
+
+
+
+
+
+

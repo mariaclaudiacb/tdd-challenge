@@ -18,7 +18,6 @@ public class ExercicioVetor2 {
      *
      *  Escreva um algoritmo para carregar um vetor com os números de 1 (inclusive) a n (inclusive) em ordem crescente.
      */
-    @Ignore
     @Test
     public void carregaVetorUmAcinco() {
 
@@ -28,7 +27,6 @@ public class ExercicioVetor2 {
         assertArrayEquals(expected,vetor);
     }
 
-    @Ignore
     @Test
     public void carregaVetorUmADez() {
 
@@ -40,8 +38,22 @@ public class ExercicioVetor2 {
 
     private int[] carregaVetor(int valorMaximo) {
 
-        // Escreva sua lógica abaixo
+        //int aux =0;
+        int[] vetor = new int[valorMaximo];
 
-        return null;
+        for ( int i = 0; i < valorMaximo ; i++){
+
+            vetor[i] = i+1;
+            /*for(int j= 0; j < valorMaximo; j ++){
+                if(valorMaximo< carregaVetor(j)){
+                    aux = valorMaximo[i] ;
+                    valorMaximo[i] = valorMaximo[j];
+                    valorMaximo[j] = aux;
+
+
+                }
+            }*/
+        }
+        return vetor;
     }
 }

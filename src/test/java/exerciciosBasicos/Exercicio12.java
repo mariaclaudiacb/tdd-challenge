@@ -40,13 +40,14 @@ public class Exercicio12 {
     }
 
     private boolean ehPositivo(int numero) {
+        if (numero >= 0) {
+            return true;
+        } else {
+            return false;
 
-    if (numero> 1){
-       return true; }
-    else{
-        return false;
+        }
 
     }
-    }
-
 }
+
+

@@ -19,7 +19,6 @@ public class ExercicioVetor3 {
      *
      *  Crie um algoritmo para copiar um vetor (utilize laço de repetição).
      */
-    @Ignore
     @Test
     public void copiarVetorUmAcinco() {
 
@@ -33,7 +32,6 @@ public class ExercicioVetor3 {
         assertArrayEquals(vetor,copiaVetor);
     }
 
-    @Ignore
     @Test
     public void copiarVetorUmADez() {
 
@@ -49,8 +47,10 @@ public class ExercicioVetor3 {
 
     private int[] copiaVetor(int[] vetor) {
 
-        // Escreva sua lógica abaixo
-
-        return null;
+        int [] copiaVetor = new int[vetor.length];
+        for (int i =0; i< vetor.length ; i++){
+            copiaVetor[i] = vetor[i];
+        }
+        return copiaVetor;
     }
 }

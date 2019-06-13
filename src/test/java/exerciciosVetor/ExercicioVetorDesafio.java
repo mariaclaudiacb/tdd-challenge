@@ -35,8 +35,9 @@ public class ExercicioVetorDesafio {
 
     private int somaDeGaus(int[] vetor) {
 
-        // Escreva sua lógica abaixo
 
+      //  int [] tamanhoVetor = new int [vetor];
+      //  int soma = (tamanhoVetor[0] + tamanhoVetor[])
         return 0;
     }
 }

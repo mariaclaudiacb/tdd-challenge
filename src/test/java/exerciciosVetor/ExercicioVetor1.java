@@ -18,7 +18,6 @@ public class ExercicioVetor1 {
      *
      *  Exercício de lógica de programação onde criaremos uma função para somar um vetor.
      */
-    @Ignore
     @Test
     public void somaValores1() {
 
@@ -27,7 +26,6 @@ public class ExercicioVetor1 {
         assertEquals(60,somaValoresVetor(vetor));
     }
 
-    @Ignore
     @Test
     public void somaValores2() {
 
@@ -36,7 +34,6 @@ public class ExercicioVetor1 {
         assertEquals(100,somaValoresVetor(vetor));
     }
 
-    @Ignore
     @Test
     public void somaValores3() {
 
@@ -46,9 +43,11 @@ public class ExercicioVetor1 {
     }
 
     private int somaValoresVetor(int[] vetor) {
-
-        // Escreva sua lógica abaixo
-
-        return 0;
+        int acumulado = 0;
+        for(int valor : vetor){
+            acumulado += valor;
+        }
+        System.out.println(acumulado);
+        return acumulado;
     }
 }

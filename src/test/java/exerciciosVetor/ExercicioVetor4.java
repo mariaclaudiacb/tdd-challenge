@@ -20,7 +20,6 @@ public class ExercicioVetor4 {
      *
      *  Dado um vetor qualquer sem valores repetidos, descubra qual é o índice do maior valor e o índice do menor valor.
      */
-    @Ignore
     @Test
     public void maiorEMenorIndice() {
 
@@ -31,7 +30,6 @@ public class ExercicioVetor4 {
         assertEquals(2,indiceDoMenorValor(vetor)); // O menor valor é 4, seu índice é 2
     }
 
-    @Ignore
     @Test
     public void maiorEMenorIndice2() {
 
@@ -44,15 +42,27 @@ public class ExercicioVetor4 {
 
     private int indiceDoMaiorValor(int[] vetor) {
 
-        // Escreva sua lógica abaixo
-
-        return 0;
+        int maior = vetor[0];
+        int maiorIndice =0;
+        for(int i = 0; i < vetor.length; i++){
+            if(maior < vetor[i]){
+                maior = vetor[i];
+                maiorIndice = i;
+            }
+        }
+        return maiorIndice;
     }
 
     private int indiceDoMenorValor(int[] vetor) {
+        int menor = vetor[0];
+        int menorIndice =0;
+        for (int i =0; i< vetor.length; i ++){
+            if(menor > vetor[i]){
+                menor = vetor[i];
+                menorIndice = i;
+            }
+        }
+        return menorIndice;
 
-        // Escreva sua lógica abaixo
-
-        return 0;
     }
 }
