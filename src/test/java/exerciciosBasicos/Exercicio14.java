@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  */
 
 public class Exercicio14 {
-    double delta;
+    //double delta;
     /**
      * Exercício 14
      *
@@ -80,20 +80,21 @@ public class Exercicio14 {
 
     // Retorna o valor de delta
     private double delta(int a, int b, int c) {
-        delta = Math.pow(b,2) - 4 * a * c;
-
-        return delta;
+        return Math.pow(b,2) - 4 * a * c;
     }
 
     // Retorna o valor da primeira raiz
     private double raiz1(int a, int b, int c) {
 
+        double delta = delta(a,b,c);
         double raiz1 = (-b +  Math.sqrt(delta))/2*a;
         return raiz1;
     }
 
     // Retorna o valor da segunda raiz
     private double raiz2(int a, int b, int c) {
+
+        double delta = delta(a,b,c);
 
         double raiz2 = (-b -  Math.sqrt(delta))/2*a;
 

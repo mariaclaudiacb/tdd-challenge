@@ -21,7 +21,6 @@ public class ExercicioVetorDesafio {
      *  Crie um método que some todos os valores de 0 a 100 sem utilizar laços de repetição (Ver soma de Gaus)
      */
 
-    @Ignore
     @Test
     public void somaValoresUmACem() {
 
@@ -35,9 +34,7 @@ public class ExercicioVetorDesafio {
 
     private int somaDeGaus(int[] vetor) {
 
-
-      //  int [] tamanhoVetor = new int [vetor];
-      //  int soma = (tamanhoVetor[0] + tamanhoVetor[])
-        return 0;
+        int somaDeGaus = (vetor[0] + vetor[vetor.length - 1]) * (vetor.length)/2;
+        return somaDeGaus;
     }
 }

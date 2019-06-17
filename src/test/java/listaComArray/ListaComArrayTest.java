@@ -17,7 +17,6 @@ public class ListaComArrayTest {
         assertEquals(0,list.tamanho());
     }
 
-    @Ignore
     @Test
     public void controiComTamanhoPreDefinido() {
         list = new ListaComArray(5);
@@ -25,13 +24,11 @@ public class ListaComArrayTest {
         assertEquals(5,list.tamanho());
     }
 
-    @Ignore
     @Test
     public void verificaSeEstaVazia() {
         assertTrue(list.estaVazia());
     }
 
-    @Ignore
     @Test
     public void verificaSeEstaVaziaAposAdicionarValor() {
 
@@ -40,7 +37,6 @@ public class ListaComArrayTest {
         assertFalse(list.estaVazia());
     }
 
-    @Ignore
     @Test
     public void size_mudaQuandoAdicionaValor() {
 
@@ -48,7 +44,6 @@ public class ListaComArrayTest {
         assertEquals(1,list.tamanho());
     }
 
-    @Ignore
     @Test
     public void pegaValorAdicionado() {
 
@@ -61,7 +56,6 @@ public class ListaComArrayTest {
         assertEquals(3,list.pega(1));
     }
 
-    @Ignore
     @Test
     public void verificaIndiceDe() {
         assertTrue(list.adiciona(2));
@@ -71,7 +65,6 @@ public class ListaComArrayTest {
         assertEquals(-1,list.indiceDe(4));
     }
 
-    @Ignore
     @Test
     public void verificaIndiceDeValorQueNaoExisteNaLista() {
         assertTrue(list.adiciona(2));
@@ -80,7 +73,6 @@ public class ListaComArrayTest {
         assertEquals(-1,list.indiceDe(4));
     }
 
-    @Ignore
     @Test
     public void verificaSeValorExisteNaLista() {
         assertTrue(list.adiciona(2));
@@ -89,7 +81,6 @@ public class ListaComArrayTest {
         assertTrue(list.contem(3));
     }
 
-    @Ignore
     @Test
     public void verificaSeValorExisteNaLista_NaoExiste() {
         assertTrue(list.adiciona(2));
@@ -98,7 +89,6 @@ public class ListaComArrayTest {
         assertFalse(list.contem(4));
     }
 
-    @Ignore
     @Test
     public void limpaLista() {
         assertTrue(list.adiciona(2));
@@ -110,7 +100,6 @@ public class ListaComArrayTest {
         assertEquals(0,list.tamanho());
     }
 
-    @Ignore
     @Test
     public void colocaNoIndiceEspecifico() {
 
@@ -123,7 +112,6 @@ public class ListaComArrayTest {
         assertEquals(4,list.pega(0));
     }
 
-    @Ignore
     @Test
     public void removeValorDoMeio() {
         assertTrue(list.adiciona(2));

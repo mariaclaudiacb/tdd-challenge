@@ -48,11 +48,12 @@ public class Exercicio13 {
 
     private boolean ehMaiorQueDez(int numero) {
 
-        if (numero > 10) {
+        /*if (numero > 10) {
             return true;
         }else{
             return false;
-        }
+        }*/
+        return numero > 10;
 
     }
 
